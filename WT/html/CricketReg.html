@@ -1,0 +1,184 @@
+<?php
+include("connection.php");
+?>
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Data Entry</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="design.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script 
+src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <section id="nav-bar">
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#"><img src="14.jpg"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="Home.php">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Register.php">Registers</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="Schedule.php">Schedules</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="Result.php">Results</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="Rules.php">Rules</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="News.php">News</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="Opponent1.php">Opponents</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="logout.php">Logout</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+</section>
+  <h1>Boys Cricket Tournament Registration</h1>
+<form action="CricketReg.php" method="post">
+
+  <p><h3 align="center">Branch:
+  <select name="branch">
+    <option>SELECT BRANCH</option><option>COMPUTER</option>
+      <option>CIVIL(A)</option><option>CIVIL(B)</option><option>MECHANICAL(A)</option>
+      <option>MECHANICAL(B)</option><option>EC</option><option>CHEMICAL</option>
+     <option>ELECTRICAL(A)</option><option>ELECTRICAL(B)</option>
+  </select>
+  <select name="year">
+      <option>SELECT YEAR</option><option>1st</option><option>2nd</option>
+      <option>3rd</option><option>4th</option><option>M.E.</option>
+  </select></h3></p>
+	
+  <table border=4 >
+    <tr>
+       <th>Sr.no</th>
+       <th>Name</th>
+       <th>PEN</th>
+       <th>Contact No.</th>
+    </tr>
+    <tr>
+       <td>1</td>
+       <td><input type="text" required="" name="PEN"></td>
+       <td><input type="text" required="" name="name"></td>
+       <td><input type="text" placeholder="Captain Contact no." name="num"></td>
+    </tr>
+    <tr>
+       <td>2</td>
+       <td><input type="text" required="" name="PEN"></td>
+       <td><input type="text" required="" name="name"></td>
+       <td><input type="text" placeholder="Vice-Captain Contact no." name="num"></td>
+    </tr>
+    <tr>
+       <td>3</td>
+       <td><input type="text" required="" name="PEN"></td>
+       <td><input type="text" required=""></td>
+    </tr>
+    <tr>
+       <td>4</td>
+       <td><input type="text" required=""></td>
+       <td><input type="text" required=""></td>
+    </tr>
+    <tr>
+       <td>5</td>
+       <td><input type="text" required=""></td>
+       <td><input type="text" required=""></td>
+    </tr>
+    <tr>
+       <td>6</td>
+       <td><input type="text" required=""></td>
+       <td><input type="text" required=""></td>
+    </tr> 
+    <tr>
+       <td>7</td>
+       <td><input type="text" required=""></td>
+       <td><input type="text" required=""></td>
+    </tr>
+    <tr>
+       <td>8</td>
+       <td><input type="text" required=""></td>
+       <td><input type="text" required=""></td>
+    </tr>
+    <tr>
+       <td>9</td>
+       <td><input type="text" required=""></td>
+       <td><input type="text" required=""></td>
+    </tr>
+    <tr>
+       <td>10</td>
+       <td><input type="text" required=""></td>
+       <td><input type="text" required=""></td>
+    </tr>
+    <tr>
+       <td>11</td>
+       <td><input type="text" required=""></td>
+       <td><input type="text" required=""></td>
+    </tr>
+    <tr>
+       <td>12</td>
+       <td><input type="text"></td>
+       <td><input type="text"></td>
+    </tr>
+    <tr>
+       <td>13</td>
+       <td><input type="text"></td>
+       <td><input type="text"></td>
+    </tr>
+    <tr>
+       <td>14</td>
+       <td><input type="text"></td>
+       <td><input type="text"></td>
+    </tr>
+    <tr>
+       <td>15</td>
+       <td><input type="text"></td>
+       <td><input type="text"></td>
+    </tr>
+  </table>
+
+   <p  align="center"><input type="submit" value="Submit">
+       <input type="reset" value="Reset"></p>
+      <p style="color:red" align="center">*Note:Minimum players should be 11</p>
+ </form>
+<?php
+if(isset($_POST['submit']))
+{
+	
+	$pen=$_POST['pen'];
+	$name=$_POST['name'];
+	$num=$_POST['num'];
+	$branch=$_POST['branch'];
+	$year=$_POST['year'];
+
+	if(mysqli_query($a, "insert into carrom(PEN,Name,ContactNumber,Branch,Year) value ('$pen', '$name', '$num','$branch','$year')"))
+	{
+	echo "Data Inserted";
+	}
+	else
+	{
+	echo "Data not Inserted";
+	}
+
+}
+?> 
+</body>
+</html> 

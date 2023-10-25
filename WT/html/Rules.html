@@ -1,0 +1,83 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
+<html>
+<head>
+	<title>Register Page</title>
+<link rel="stylesheet" href="design.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script 
+src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <section id="nav-bar">
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#"><img src="14.jpg"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="Home.html">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Register.html">Registers</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="Schedule.html">Schedules</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="#Result.html">Results</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="Rules.html">Rules</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="News.html">News</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="Opponent1.php">Opponents</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="logout.php">Logout</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+</section>
+<h1>Select any Sports to see Rules and Regulation</h1>
+    <div class="tablespace">
+    <div class="col-5">
+<table class="table table-bordered">
+<tr>
+    <td><a class="btn btn-info btn-lg btn-block" href="CricketRule.html" role="button">Cricket</a></td>
+      <td><a class="btn btn-info btn-lg btn-block" href="VolleyballRule.html" role="button">Volleyball</a></td>
+</tr>
+<tr>
+    <td><a class="btn btn-info btn-lg btn-block" href="CarromRule.html" role="button">Carrom</a></td>
+      <td><a class="btn btn-info btn-lg btn-block" href="ChessRule.html" role="button">Chess</a></td>
+</tr>
+<tr>
+    <td><a class="btn btn-info btn-lg btn-block" href="KabaddiRule.html" role="button">Kabaddi</a></td>
+      <td><a class="btn btn-info btn-lg btn-block" href="TTRule.html" role="button">TableTennis</a></td>
+</tr>
+</table>
+    </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Chess Registration</title>
+<link rel="stylesheet" href="design.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script 
+src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <section id="nav-bar">
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#"><img src="14.jpg"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="Home.php">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Register.php">Registers</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="Schedule.php">Schedules</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="Result.php">Results</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="Rules.php">Rules</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="News.php">News</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="Opponent1.php">Opponents</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="logout.php">Logout</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+</section>
+   <h1>Chess Registration</h1>
+<form action="http://localhost/WT/ChessReg.php" method="post">
+
+  <p><h3>BRANCH
+  <select name="branch">
+    <option>SELECT BRANCH</option><option>COMPUTER</option>
+      <option>CIVIL(A)</option><option>CIVIL(B)</option><option>MECHANICAL(A)</option>
+      <option>MECHANICAL(B)</option><option>EC</option><option>CHEMICAL</option>
+     <option>ELECTRICAL(A)</option><option>ELECTRICAL(B)</option>
+  </select>
+  <select name="year">
+      <option>SELECT YEAR</option><option>1st</option><option>2nd</option>
+      <option>3rd</option><option>4th</option><option>M.E.</option>
+  </select></h3></p>
+   <table border=4>
+      <tr>
+         <th>Sr. No.</th>
+	<th>PEN</th>
+         <th>Name</th>
+         
+         <th>Contact Number</th>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td><input type="number" name="pen" required></td>
+          <td><input type="text" name="name" required></td>
+          <td><input type="number" name="num" required></td>
+      </tr>
+   </table>
+   <p align="center"><input type="submit" value="Submit" name="submit"> 
+<input type="reset" value="Reset"></p>
+</form>
+ </body>
+</html>
